@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Home</title>
+  <meta name="description" content="Personal portfolio and project showcase. Built with a clean, editorial layout.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home-page">
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Go to Homepage">
+        <!-- Monogram Circle - Populates initials from script.js, or image if configured -->
+        <div id="header-monogram-wrapper" class="brand-monogram" data-field="initials">YN</div>
+        <span data-field="name">YOUR NAME</span>
+      </a>
+      
+      <!-- Mobile Menu Button (Hamburger) -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+      
+      <!-- Nav Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Accent & Dark/Light Toggle Controls -->
+      <div class="nav-controls">
+        <div class="accent-swatches" aria-label="Choose accent color">
+          <button class="swatch swatch-sage" data-accent="sage" aria-label="Sage Green"></button>
+          <button class="swatch swatch-ocean" data-accent="ocean" aria-label="Ocean Blue"></button>
+          <button class="swatch swatch-terracotta" data-accent="terracotta" aria-label="Terracotta Rust"></button>
+          <button class="swatch swatch-plum" data-accent="plum" aria-label="Plum Purple"></button>
+          <button class="swatch swatch-slate" data-accent="slate" aria-label="Slate Gray"></button>
+        </div>
+        
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light and dark mode">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10 0-4.8 3.5-8.9 8.3-9.7.7-.1 1.3.4 1.3 1.1 0 .4-.2.8-.5 1-1.6 1.5-2.5 3.6-2.5 5.8 0 4.4 3.6 8 8 8 2.2 0 4.3-.9 5.8-2.5.3-.3.7-.5 1.1-.5.7 0 1.2.6 1.1 1.3-.9 4.8-5 8.3-9.7 8.3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT CONTAINER
+       ========================================== -->
+  <main class="container">
+    
+    <!-- Hero / Title Section -->
+    <section class="hero" aria-labelledby="hero-tagline">
+      <!-- Monogram or Profile Photo Container -->
+      <!-- EDIT THIS IN script.js -> portfolioData.avatarUrl / initials -->
+      <div class="hero-avatar-wrapper" id="hero-avatar-container">
+        <!-- Rendered dynamically -->
+        <div class="hero-avatar-monogram" data-field="initials">YN</div>
+      </div>
+      
+      <!-- Headline / Tagline -->
+      <h1 class="headline" id="hero-tagline">YOUR TAGLINE</h1>
+      
+      <!-- Introduction description -->
+      <p class="intro" id="hero-intro">YOUR SHORT ABOUT DESCRIPTION</p>
+      
+      <!-- Location, Focus areas, and Status -->
+      <div class="hero-meta-row">
+        <div class="meta-item">
+          <!-- Pin Icon -->
+          <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+          <span id="hero-location">YOUR CITY</span>
+        </div>
+        <div class="meta-item">
+          <!-- Book Icon -->
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5a2.5 2.5 0 00-2.5 2.5v14zM4 19.5A2.5 2.5 0 006.5 22H20v-3H6.5a2.5 2.5 0 00-2.5 2.5z"/></svg>
+          <span id="hero-focus">YOUR FOCUS AREAS</span>
+        </div>
+        <div class="meta-item">
+          <!-- Briefcase/Status Icon -->
+          <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-8 0h-2V4h2v2z"/></svg>
+          <span id="hero-status">YOUR CURRENT STATUS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Label-on-left Row: Selected Work -->
+    <section class="section-row" aria-labelledby="featured-title">
+      <div class="row-label">
+        <h2 id="featured-title">Selected Work</h2>
+      </div>
+      <div class="row-content">
+        <!-- Featured Projects container populated from script.js -->
+        <div class="project-list" id="featured-projects-container">
+          <!-- Rendered dynamically -->
+        </div>
+        
+        <a href="projects.html" class="text-link-btn">
+          View all projects 
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Label-on-left Row: About Preview -->
+    <section class="section-row" aria-labelledby="about-preview-title">
+      <div class="row-label">
+        <h2 id="about-preview-title">About</h2>
+      </div>
+      <div class="row-content">
+        <p id="about-preview-text">YOUR SHORT ABOUT DESCRIPTION</p>
+        
+        <a href="about.html" class="text-link-btn">
+          Read full bio 
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Label-on-left Row: Contact Call-To-Action -->
+    <section class="section-row" aria-labelledby="contact-cta-title">
+      <div class="row-label">
+        <h2 id="contact-cta-title">Let's Connect</h2>
+      </div>
+      <div class="row-content">
+        <p>I am currently open to internships, volunteering roles, and collaboration on science or technical projects. If you would like to work together, please get in touch.</p>
+        
+        <a href="contact.html" class="text-link-btn">
+          Get in touch 
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="footer-year">2026</span> <span data-field="name">YOUR NAME</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link script.js after page elements -->
+  <script src="script.js"></script>
+</body>
+</html>
