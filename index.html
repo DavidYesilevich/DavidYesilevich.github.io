@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Home</title>
-  <meta name="description" content="Personal portfolio and project showcase. Built with a clean, editorial layout.">
+  <meta name="description" content="Personal portfolio and project showcase. Built with a premium, asymmetric editorial layout.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="home-page">
 
   <!-- ==========================================
+       SCROLL PROGRESS BAR
+       ========================================== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================
        NAVIGATION HEADER
        ========================================== -->
-  <header>
-    <div class="container nav-container">
-      <a href="index.html" class="nav-brand" aria-label="Go to Homepage">
-        <!-- Monogram Circle - Populates initials from script.js, or image if configured -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Scroll to Top">
+        <!-- Small monogram circle: populates initials, or photo if configured -->
         <div id="header-monogram-wrapper" class="brand-monogram" data-field="initials">YN</div>
         <span data-field="name">YOUR NAME</span>
       </a>
@@ -27,27 +32,38 @@
         </svg>
       </button>
       
-      <!-- Nav Links -->
+      <!-- Anchor Navigation Links -->
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li><a href="experience.html" class="nav-link">Experience</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       
-      <!-- Accent & Dark/Light Toggle Controls -->
+      <!-- Control elements: Color Palette and Dark/Light Mode -->
       <div class="nav-controls">
-        <div class="accent-swatches" aria-label="Choose accent color">
-          <button class="swatch swatch-sage" data-accent="sage" aria-label="Sage Green"></button>
-          <button class="swatch swatch-ocean" data-accent="ocean" aria-label="Ocean Blue"></button>
-          <button class="swatch swatch-terracotta" data-accent="terracotta" aria-label="Terracotta Rust"></button>
-          <button class="swatch swatch-plum" data-accent="plum" aria-label="Plum Purple"></button>
-          <button class="swatch swatch-slate" data-accent="slate" aria-label="Slate Gray"></button>
+        <!-- Dynamic Color Palette Picker -->
+        <div class="color-picker-wrapper">
+          <button class="palette-btn" id="palette-dropdown-btn" aria-label="Choose accent color" aria-haspopup="true" aria-expanded="false">
+            <!-- Palette Icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          </button>
+          
+          <!-- Dropdown Swatches Menu -->
+          <div class="accent-dropdown" id="accent-swatches-menu" role="menu">
+            <button class="swatch swatch-sage" data-accent="sage" aria-label="Sage Green" role="menuitem"></button>
+            <button class="swatch swatch-ocean" data-accent="ocean" aria-label="Ocean Blue" role="menuitem"></button>
+            <button class="swatch swatch-terracotta" data-accent="terracotta" aria-label="Terracotta Rust" role="menuitem"></button>
+            <button class="swatch swatch-plum" data-accent="plum" aria-label="Plum Purple" role="menuitem"></button>
+            <button class="swatch swatch-slate" data-accent="slate" aria-label="Slate Gray" role="menuitem"></button>
+          </div>
         </div>
         
+        <!-- Light / Dark Mode Toggle Button -->
         <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light and dark mode">
           <!-- Sun Icon (shown in dark mode) -->
           <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
@@ -59,90 +75,197 @@
   </header>
 
   <!-- ==========================================
-       MAIN CONTENT CONTAINER
+       MAIN SITE CONTENT
        ========================================== -->
   <main class="container">
     
-    <!-- Hero / Title Section -->
-    <section class="hero" aria-labelledby="hero-tagline">
-      <!-- Monogram or Profile Photo Container -->
-      <!-- EDIT THIS IN script.js -> portfolioData.avatarUrl / initials -->
-      <div class="hero-avatar-wrapper" id="hero-avatar-container">
-        <!-- Rendered dynamically -->
-        <div class="hero-avatar-monogram" data-field="initials">YN</div>
+    <!-- 0. HERO SECTION -->
+    <section id="home" class="hero-section" aria-label="Introduction">
+      <div class="hero-visual">
+        <!-- Monogram initials or Custom Avatar image -->
+        <!-- EDIT THIS IN script.js -> portfolioData.avatarUrl / initials -->
+        <div id="hero-avatar-container">
+          <!-- Populated dynamically: initials or image -->
+          <div class="hero-monogram-circle" data-field="initials">YN</div>
+        </div>
+        
+        <!-- Metadata: Location, Focus, Status -->
+        <div class="hero-aside-meta">
+          <div class="hero-meta-block">
+            <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+            <span id="hero-location">YOUR CITY</span>
+          </div>
+          <div class="hero-meta-block">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5a2.5 2.5 0 00-2.5 2.5v14zM4 19.5A2.5 2.5 0 006.5 22H20v-3H6.5a2.5 2.5 0 00-2.5 2.5z"/></svg>
+            <span id="hero-focus">YOUR FOCUS AREAS</span>
+          </div>
+          <div class="hero-meta-block">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-8 0h-2V4h2v2z"/></svg>
+            <span id="hero-status">YOUR CURRENT STATUS</span>
+          </div>
+        </div>
       </div>
       
-      <!-- Headline / Tagline -->
-      <h1 class="headline" id="hero-tagline">YOUR TAGLINE</h1>
-      
-      <!-- Introduction description -->
-      <p class="intro" id="hero-intro">YOUR SHORT ABOUT DESCRIPTION</p>
-      
-      <!-- Location, Focus areas, and Status -->
-      <div class="hero-meta-row">
-        <div class="meta-item">
-          <!-- Pin Icon -->
-          <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
-          <span id="hero-location">YOUR CITY</span>
-        </div>
-        <div class="meta-item">
-          <!-- Book Icon -->
-          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5a2.5 2.5 0 00-2.5 2.5v14zM4 19.5A2.5 2.5 0 006.5 22H20v-3H6.5a2.5 2.5 0 00-2.5 2.5z"/></svg>
-          <span id="hero-focus">YOUR FOCUS AREAS</span>
-        </div>
-        <div class="meta-item">
-          <!-- Briefcase/Status Icon -->
-          <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-8 0h-2V4h2v2z"/></svg>
-          <span id="hero-status">YOUR CURRENT STATUS</span>
+      <div class="hero-text">
+        <h1 class="hero-headline" id="hero-tagline">YOUR TAGLINE</h1>
+        <p class="hero-intro" id="hero-intro">YOUR SHORT BIO DESCRIPTION</p>
+      </div>
+    </section>
+
+    <!-- 1. ABOUT SECTION -->
+    <section id="about" class="editorial-section scroll-section" aria-labelledby="about-title">
+      <div class="section-aside">
+        <span class="section-num">01 /</span>
+        <h2 id="about-title">about</h2>
+      </div>
+      <div class="section-content">
+        <div class="about-grid">
+          <!-- Story Block -->
+          <!-- EDIT THIS IN script.js -> portfolioData.about.long -->
+          <div class="about-body" id="about-long">
+            <!-- Populated dynamically -->
+          </div>
+          
+          <!-- Details Block (Education & Interests) -->
+          <div class="about-extra">
+            <!-- Education List Container -->
+            <!-- EDIT THIS IN script.js -> portfolioData.education -->
+            <div class="about-education">
+              <h3>Education</h3>
+              <div id="education-container">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+            
+            <!-- Interests List Container -->
+            <!-- EDIT THIS IN script.js -> portfolioData.interests -->
+            <div class="about-interests">
+              <h3>Interests</h3>
+              <div id="interests-container">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Awards & Honors List Container -->
+            <!-- EDIT THIS IN script.js -> portfolioData.awards -->
+            <div class="about-awards">
+              <h3>Awards &amp; Honors</h3>
+              <div id="awards-container">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Label-on-left Row: Selected Work -->
-    <section class="section-row" aria-labelledby="featured-title">
-      <div class="row-label">
-        <h2 id="featured-title">Selected Work</h2>
+    <!-- 2. WORK SECTION -->
+    <section id="work" class="editorial-section scroll-section" aria-labelledby="work-title">
+      <div class="section-aside">
+        <span class="section-num">02 /</span>
+        <h2 id="work-title">work</h2>
       </div>
-      <div class="row-content">
-        <!-- Featured Projects container populated from script.js -->
-        <div class="project-list" id="featured-projects-container">
-          <!-- Rendered dynamically -->
+      <div class="section-content">
+        <p>A structured index of my projects. Click a project row to expand details, view the role, and visit source links.</p>
+        
+        <!-- Interactive Projects Table Container -->
+        <!-- EDIT THIS IN script.js -> portfolioData.projects -->
+        <div class="projects-table" id="projects-table-container">
+          <!-- Populated dynamically -->
         </div>
-        
-        <a href="projects.html" class="text-link-btn">
-          View all projects 
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
       </div>
     </section>
 
-    <!-- Label-on-left Row: About Preview -->
-    <section class="section-row" aria-labelledby="about-preview-title">
-      <div class="row-label">
-        <h2 id="about-preview-title">About</h2>
+    <!-- 3. EXPERIENCE SECTION -->
+    <section id="experience" class="editorial-section scroll-section" aria-labelledby="experience-title">
+      <div class="section-aside">
+        <span class="section-num">03 /</span>
+        <h2 id="experience-title">experience</h2>
       </div>
-      <div class="row-content">
-        <p id="about-preview-text">YOUR SHORT ABOUT DESCRIPTION</p>
-        
-        <a href="about.html" class="text-link-btn">
-          Read full bio 
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+      <div class="section-content">
+        <!-- Work Experience Timeline Grid -->
+        <!-- EDIT THIS IN script.js -> portfolioData.experience -->
+        <h3 class="subsection-heading">Work Experience</h3>
+        <div class="timeline" id="experience-container">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Clubs & Activities Accordion -->
+        <!-- EDIT THIS IN script.js -> portfolioData.clubs -->
+        <h3 class="subsection-heading">Clubs &amp; Activities</h3>
+        <p class="subsection-note">Click a row to expand details.</p>
+        <div class="clubs-accordion" id="clubs-container">
+          <!-- Populated dynamically -->
+        </div>
       </div>
     </section>
 
-    <!-- Label-on-left Row: Contact Call-To-Action -->
-    <section class="section-row" aria-labelledby="contact-cta-title">
-      <div class="row-label">
-        <h2 id="contact-cta-title">Let's Connect</h2>
+    <!-- 4. SKILLS SECTION -->
+    <section id="skills" class="editorial-section scroll-section" aria-labelledby="skills-title">
+      <div class="section-aside">
+        <span class="section-num">04 /</span>
+        <h2 id="skills-title">skills</h2>
       </div>
-      <div class="row-content">
-        <p>I am currently open to internships, volunteering roles, and collaboration on science or technical projects. If you would like to work together, please get in touch.</p>
-        
-        <a href="contact.html" class="text-link-btn">
-          Get in touch 
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+      <div class="section-content">
+        <!-- Categorized Skills Grid -->
+        <!-- EDIT THIS IN script.js -> portfolioData.skills -->
+        <div class="skills-columns" id="skills-container">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact" class="editorial-section scroll-section" aria-labelledby="contact-title">
+      <div class="section-aside">
+        <span class="section-num">05 /</span>
+        <h2 id="contact-title">contact</h2>
+      </div>
+      <div class="section-content">
+        <div class="contact-grid">
+          <div class="contact-text">
+            <h3>let's connect.</h3>
+            <p id="contact-intro">YOUR CONTACT CTA INTRO</p>
+          </div>
+          
+          <div class="contact-links-list">
+            <!-- Resume -->
+            <a href="#" class="contact-row-link" id="contact-resume-row" target="_blank" rel="noopener noreferrer" aria-label="Download resume">
+              <span class="label">Resume</span>
+              <span class="value contact-value">YOUR RESUME</span>
+              <span class="arrow">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+            </a>
+
+            <!-- Email -->
+            <a href="#" class="contact-row-link" id="contact-email-row" aria-label="Send email">
+              <span class="label">Email</span>
+              <span class="value contact-value">YOUR EMAIL</span>
+              <span class="arrow">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="#" class="contact-row-link" id="contact-linkedin-row" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">
+              <span class="label">LinkedIn</span>
+              <span class="value contact-value">YOUR LINKEDIN URL</span>
+              <span class="arrow">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="#" class="contact-row-link" id="contact-github-row" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">
+              <span class="label">GitHub</span>
+              <span class="value contact-value">YOUR GITHUB URL</span>
+              <span class="arrow">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -157,7 +280,7 @@
     </div>
   </footer>
 
-  <!-- Link script.js after page elements -->
+  <!-- Unified Engine script loading -->
   <script src="script.js"></script>
 </body>
 </html>

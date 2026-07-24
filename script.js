@@ -4,12 +4,12 @@
 
 const portfolioData = {
   // Basic Personal Info
-  name: "YOUR NAME",
-  initials: "YN",
-  tagline: "A high school student who likes to build useful things",
-  location: "YOUR CITY, STATE",
-  focus: "Computer Science, Design & Mathematics",
-  status: "High School Student • Open to internship opportunities",
+  name: "David Yesilevich",
+  initials: "DY",
+  tagline: "A high school student exploring cybersecurity, finance, and civic leadership",
+  location: "Brooklyn, NY",
+  focus: "Cybersecurity, Finance, Engineering & Public Policy",
+  status: "High School Student • Class of 2028 • Open to internship opportunities",
   
   // Optional photo. Leave as "" to show your clean monogram initials.
   // To use a photo, place your image (e.g., profile.jpg) in the directory and set this to "profile.jpg"
@@ -18,111 +18,231 @@ const portfolioData = {
   // About Section
   about: {
     // A short 1-2 sentence intro for the homepage
-    short: "I design websites, build scripts, and study science. I love learning how systems work and how to design clean digital experiences.",
+    short: "I'm a high school student with wide-ranging interests in cybersecurity, finance, and public policy, alongside a love for chess, music, and debate.",
     
-    // A longer, descriptive story for your About page. Double newlines (\n\n) create new paragraphs.
-    long: "I am a high school student with a deep curiosity for computing and visual arts. I enjoy building things with code, designing clean user interfaces, and researching science topics. I spend my free time coding small tools, organizing club meetings, and learning new skills.\n\nI believe that software should be intuitive, accessible, and elegant. Through my coursework and self-directed projects, I'm working to expand my knowledge in coding and design while looking for opportunities to collaborate on meaningful work."
+    // A longer, descriptive story for your About section. Double newlines (\n\n) create new paragraphs.
+    long: "I'm a high school student with a strong drive to explore how systems work, whether that's a computer network, a financial market, or a piece of legislation. Through an intensive cybersecurity program I've studied network security, ethical hacking, and cryptography, and I'm researching how flash loan attacks exploit vulnerabilities in decentralized finance. I also lead my school's Investment and Finance Club, where I study markets through fundamental and technical analysis. I'm drawn to engineering as well — building and wiring robots with my school's robotics team, studying architecture and design, and turning ideas into working prototypes at hackathons.\n\nOutside the classroom, I compete on my school's chess, robotics, and Model United Nations teams, and I captain the Model Congress team. I care about clear communication and civic engagement, which has taken shape through voter registration outreach, student journalism, and public speaking at conferences in front of government officials and community leaders. I'm always looking for new opportunities to learn, lead, and collaborate."
   },
 
   // Contact Info
   contact: {
-    intro: "I am always excited to discuss new projects, hear about opportunities, or just chat. Feel free to reach out via email or connect with me on socials.",
-    email: "YOUR.EMAIL@example.com",
-    linkedin: "https://linkedin.com/in/YOUR-USERNAME",
-    github: "https://github.com/YOUR-USERNAME"
+    intro: "I'm always excited to discuss new projects, opportunities, or ideas around cybersecurity, finance, and public policy. Feel free to reach out.",
+    resumeUrl: "David_Yesilevich_Resume.pdf",
+    email: "david695y@gmail.com",
+    linkedin: "https://www.linkedin.com/in/david-yesilevich-230b083a8",
+    linkedinName: "David Yesilevich",
+    github: "https://github.com/DavidYesilevich",
+    githubName: "DavidYesilevich"
   },
 
   // Education History
   education: [
     {
-      institution: "Your High School Name",
-      degree: "High School Diploma candidate",
-      dates: "2022 - 2026",
-      details: "Relevant Coursework: AP Computer Science A, AP Calculus BC, AP Physics C • Web Development Club Founder • GPA: 4.0"
+      institution: "Yeshivah of Flatbush High School",
+      degree: "High School Diploma candidate • GPA: 4.04/4.33",
+      dates: "Expected Graduation: June 2028",
+      details: "Coursework: AP World History, AP Computer Science A, Architecture & Design, Principles of Intellectual Property, MIT OCW: Principles of Microeconomics • Principal's List, 2025-2026"
     }
   ],
 
-  // Skills List (Pills on About Page)
-  skills: [
-    "HTML & CSS",
-    "JavaScript (ES6+)",
-    "Python",
-    "Figma",
-    "Git & GitHub",
-    "Responsive Web Design",
-    "Technical Writing"
-  ],
+  // Skills List — grouped by the categories used in the resume's "Skills & Hobbies" section
+  skills: {
+    "Computer Skills": ["3D Printing", "Java", "HTML", "Scratch", "Google Suite", "Canva"],
+    "Languages": ["Russian (Fluent)", "Hebrew (Conversational)", "Spanish (Elementary)"],
+    "Instruments": ["Piano", "Saxophone", "Guitar"]
+  },
 
   // Interests / Hobbies
   interests: [
     {
-      name: "Creative Coding",
-      desc: "Making generative art and interactive web visuals using canvas APIs."
+      name: "Chess",
+      desc: "Competitive player and team president; placed 9th individually and 1st in mixed doubles at the NY State Chess Championship, and 35th individually at US Chess Super Nationals."
     },
     {
-      name: "Graphic Design",
-      desc: "Experimenting with layouts, typography, and color theory in poster designs."
+      name: "Speech & Debate",
+      desc: "Best Delegate award winner at International Model United Nations in Canada, with multiple honorable mentions at Yeshiva League and Yeshiva University Model UN conferences, plus top placements in TIKVAH debate competitions."
     },
     {
-      name: "Science Olympiad",
-      desc: "Competing in regional events focusing on data analysis and experimental design."
+      name: "Engineering",
+      desc: "Robotics team member working with Python and electrical engineering fundamentals; studies architecture and design coursework and co-led a 2nd place team at the Kohelet Hackathon."
+    },
+    {
+      name: "Music",
+      desc: "Piano, saxophone, and guitar player. Former National Children's Chorus singer who performed at Carnegie Hall and Lincoln Center and won a Grammy for Best Choral Performance in 2022 (with a nomination in 2024); also a soloist with the Yeshivah of Flatbush Choir."
+    },
+    {
+      name: "Theater",
+      desc: "Lead male role in Yeshivah of Flatbush's Hebrew theatrical productions, including Joseph in \"Joseph and the Technicolor Dreamcoat\" and Hans in \"Frozen.\""
+    },
+    {
+      name: "Athletics",
+      desc: "Member of the varsity soccer and track teams, earning an All-Star Award at the Long Island Soccer Cup and helping the soccer team reach the playoffs for the first time in five years."
     }
   ],
 
   // Projects List
-  // - featured: true shows the project on index.html and projects.html
-  // - featured: false shows it only on projects.html
   // - link: leave as "" if there is no live url or repository link
   projects: [
     {
-      title: "School Planner Tool",
-      year: "2025",
-      description: "A lightweight, browser-based student agenda application featuring customizable class schedules, notes, and local storage integration.",
-      role: "Lead Developer & Designer",
-      technologies: ["JavaScript", "HTML5", "CSS Grid", "localStorage"],
-      link: "https://github.com/YOUR-USERNAME/school-planner",
-      featured: true
-    },
-    {
-      title: "Interactive Wing Simulator",
-      year: "2024",
-      description: "A visual simulation demonstrating air particle interaction with standard wing cross-sections, built for a science fair project.",
-      role: "Independent Programmer",
-      technologies: ["Python", "Pygame", "Physics Modeling"],
+      title: "DeFi Flash Loan Attack Research",
+      year: "2026",
+      description: "A final research project for an intensive cybersecurity program analyzing how flash loan-facilitated attacks exploit vulnerabilities in decentralized finance (DeFi) smart contracts, along with potential mitigation strategies.",
+      role: "Researcher",
+      technologies: ["Network Security", "Cryptography", "Smart Contract Analysis", "DeFi"],
       link: "",
       featured: true
     },
     {
-      title: "Neighborhood Food Drive Portal",
-      year: "2023",
-      description: "A mobile-friendly local event site that coordinated drop-off schedules, tracked progress, and reduced sign-up confusion by 25%.",
-      role: "Volunteer Developer",
-      technologies: ["HTML5", "CSS Flexbox", "JavaScript"],
-      link: "https://github.com/YOUR-USERNAME/food-drive",
+      title: "Hockey Analytics & Standings Model",
+      year: "2026",
+      description: "Organized a team for the Wharton High School Data Science Competition and built a model analyzing thousands of rows of hockey data to predict standings and game outcomes.",
+      role: "Team Organizer",
+      technologies: ["Data Analysis", "Statistical Modeling", "Python"],
+      link: "",
+      featured: true
+    },
+    {
+      title: "AI Anti-Propaganda Pitch",
+      year: "2026",
+      description: "Created a video pitch for an AI product that identifies propaganda and misinformation and, instead of simply censoring it, uses professional input to teach other AI systems to redirect users toward more factually accurate information.",
+      role: "Creator & Presenter",
+      technologies: ["AI Product Design", "Video Production", "Pitching"],
+      link: "",
+      featured: true
+    },
+    {
+      title: "Competition Robot Build",
+      year: "2024 - Present",
+      description: "Meets weekly with the school robotics team to design and build a robot for an end-of-year competition, learning Python programming and core electrical engineering concepts along the way. Recurring Robotics Champion in 2023 and 2024.",
+      role: "Team Member",
+      technologies: ["Python", "Electrical Engineering", "Robotics"],
+      link: "",
       featured: false
     }
   ],
 
-  // Experience List (Timeline on Experience Page)
+  // Work Experience List (Timeline) — paid/formal roles and internships only
   experience: [
     {
-      organization: "Local Technology Group",
-      role: "Summer Coding Intern",
-      dates: "June 2025 - August 2025",
-      description: "Assisted the design team with responsive frontend mockups. Written automated test scripts in Python to verify API endpoints."
+      organization: "NYU K12 STEM — Computer Science for Cyber Security",
+      role: "Program Participant",
+      dates: "July 2026 - Present",
+      description: "Participate daily in an intensive cybersecurity program covering network security, ethical hacking, cryptography, and secure computing. Solve real-world challenges through hands-on labs, and conduct a research project analyzing flash loan-facilitated attacks in decentralized finance (DeFi)."
     },
     {
-      organization: "School Coding Association",
-      role: "President / Co-founder",
-      dates: "September 2023 - Present",
-      description: "Host weekly workshops introducing 20+ peers to basic HTML/CSS/JS syntax. Organizing a student hackathon in partnership with local community centers."
+      organization: "William S. Levine Family Shoah Holocaust Institute",
+      role: "Intern",
+      dates: "June 2026 - Present",
+      description: "Collaborate on a social media initiative presenting Jewish people and culture through authentic, engaging video content. Brainstorm video concepts and street-interview formats, and help plan, script, and film short-form content."
     },
     {
-      organization: "Community Green Initiative",
-      role: "Volunteer Webmaster",
-      dates: "January 2024 - Present",
-      description: "Created and updated dynamic registration forms for local park cleanups, simplifying volunteer registration processes."
+      organization: "Self-Employed",
+      role: "Academic Tutor",
+      dates: "October 2025 - Present",
+      description: "Tutor a second-grade student across STEM subjects including engineering and astronomy through structured weekly sessions, customizing materials to introduce complex topics like aerodynamics and biology in an age-appropriate format."
+    },
+    {
+      organization: "Brooklyn Voter Registration Initiative",
+      role: "Volunteer",
+      dates: "September 2025 - November 2025",
+      description: "Executed voter registration verification and education initiatives for prospective voters, streamlining the registration process by providing accurate procedural guidance and resources."
+    },
+    {
+      organization: "Summer Youth Employment Program",
+      role: "Participant",
+      dates: "Summer 2025, Summer 2026",
+      description: "Completed weekly professional development training in resume building, interviewing, and workplace communication."
     }
+  ],
+
+  // Clubs & Activities List (Accordion) — school clubs, teams, and extracurriculars
+  clubs: [
+    {
+      organization: "Yeshivah of Flatbush Investment and Finance Club",
+      role: "President",
+      dates: "September 2024 - Present",
+      description: "Lead weekly club meetings and compete in international stock challenges. Teach members fundamental and technical analysis, financial markets, and investment strategies."
+    },
+    {
+      organization: "Yeshivah of Flatbush Model Congress Team",
+      role: "Captain",
+      dates: "September 2024 - Present",
+      description: "Lead and plan weekly practices, compete in Model Congress competitions throughout the school year, and organize an intraschool end-of-year competition. Won 1st, 3rd, and 5th place awards at multiple events, including recurring 3rd and 5th place finishes in the Citron Model Congress League."
+    },
+    {
+      organization: "Yeshivah of Flatbush Chess Team",
+      role: "President",
+      dates: "September 2024 - Present",
+      description: "Lead and plan weekly practices, play on the first seated board, and compete against other schools in the Yeshivah League."
+    },
+    {
+      organization: "Yeshivah of Flatbush Model United Nations Team",
+      role: "Starting Member",
+      dates: "September 2024 - Present",
+      description: "Participate in weekly practices and compete in Model UN conferences, earning awards at international, national, and local levels."
+    },
+    {
+      organization: "Yeshivah of Flatbush Robotics Team",
+      role: "Team Member",
+      dates: "September 2024 - Present",
+      description: "Meet weekly to design and build a robot for an end-of-year competition, learning Python programming and core electrical engineering concepts. Recurring Robotics Champion in 2023 and 2024."
+    },
+    {
+      organization: "The Phoenix (School Newspaper)",
+      role: "Contributing Writer",
+      dates: "September 2025 - Present",
+      description: "Write articles for the school newspaper on topics including business, current news, and the economy."
+    },
+    {
+      organization: "TIKVAH",
+      role: "Program Member",
+      dates: "September 2023 - Present",
+      description: "Participate in weekly discussions and debates on philosophical, governmental, and religious works, placing 2nd, 3rd, and 4th in multiple competitions. Attended the Millstone Scholars program and currently attend the Menachem Begin Scholars program. Spoke at the Jewish Leadership Conference before an audience of 1,200+ government officials, journalists, and community leaders."
+    },
+    {
+      organization: "Yeshivah of Flatbush Choir",
+      role: "Singer",
+      dates: "September 2024 - Present",
+      description: "Participate in weekly rehearsals and perform at events as a selected lead solo singer, including performances at the District Attorney's office and JFK Airport for holiday events."
+    },
+    {
+      organization: "Yeshivah of Flatbush Hebrew Play",
+      role: "Lead Male Role",
+      dates: "September 2024 - Present",
+      description: "Participate in daily rehearsals during the fall season and perform full-length plays in Hebrew, including the lead role of Joseph in \"Joseph and the Technicolor Dreamcoat\" and the lead male role of Hans in \"Frozen.\""
+    },
+    {
+      organization: "Yeshivah of Flatbush Soccer Team",
+      role: "Team Member",
+      dates: "September 2024 - Present",
+      description: "Compete in matches against other schools, helping the team reach the playoffs for the first time in five years and earning an All-Star Award at the Long Island Soccer Cup."
+    },
+    {
+      organization: "Yeshivah of Flatbush Track Team",
+      role: "Team Member",
+      dates: "September 2024 - Present",
+      description: "Participate in weekly practices and compete in track races throughout the school year."
+    },
+    {
+      organization: "National Children's Chorus",
+      role: "Singer",
+      dates: "September 2015 - August 2022",
+      description: "Attended weekly practices and performed internationally, including at Carnegie Hall and Lincoln Center. Won a Grammy for Best Choral Performance in 2022 and was nominated for Best Traditional Pop Vocal Album in 2024."
+    }
+  ],
+
+  // Awards & Honors — combined and summarized from the resume's Awards and Achievements section
+  awards: [
+    "College Board National Recognition Program School Recognition Award — June 2026",
+    "Yeshivah of Flatbush Principal's List — 2025-2026",
+    "Best Delegate, International Model United Nations (Canada) — March 2025",
+    "Multiple Honorable Mentions, Yeshiva League & Yeshiva University Model United Nations — 2025-2026",
+    "1st Place in Committee, Yeshiva League Model Congress, plus recurring 3rd & 5th place finishes, Citron Model Congress League — 2024-2026",
+    "2nd Place Team, Kohelet Hackathon — March 2026",
+    "NY State Chess Championship: 9th Individual, 1st Mixed Doubles (2024) • US Chess Super Nationals: 35th Individual (2017)",
+    "Recurring Robotics Champion — 2023, 2024",
+    "All-Star Award, Long Island Soccer Cup — April 2026",
+    "Grammy Award, Best Choral Performance (National Children's Chorus) — 2022; Grammy nomination, Best Traditional Pop Vocal Album — 2024"
   ]
 };
 
@@ -134,28 +254,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Initial State Load (Theme & Accent Color)
   initThemeAndAccent();
 
-  // 2. Global Elements Rendering (Header Monogram, Footer Brand, Active Link Styling)
+  // 2. Global Elements Rendering (Header Monogram, Footer Brand)
   renderGlobalElements();
 
-  // 3. Page-Specific Rendering
-  const pathname = window.location.pathname.split("/").pop();
-  
-  // Decide page mapping based on body ID (robust fallback for raw file double-click)
-  const bodyId = document.body.id;
-  
-  if (bodyId === "home-page" || pathname === "index.html" || pathname === "") {
-    renderHomePage();
-  } else if (bodyId === "about-page" || pathname === "about.html") {
-    renderAboutPage();
-  } else if (bodyId === "projects-page" || pathname === "projects.html") {
-    renderProjectsPage();
-  } else if (bodyId === "experience-page" || pathname === "experience.html") {
-    renderExperiencePage();
-  } else if (bodyId === "contact-page" || pathname === "contact.html") {
-    renderContactPage();
-  }
+  // 3. Render Page Sections
+  renderHero();
+  renderAbout();
+  renderProjects();
+  renderExperience();
+  renderClubs();
+  renderSkills();
+  renderContact();
 
-  // 4. Register Interactive Listeners (Mobile Menu, Theme Switch, Accent Selection)
+  // 4. Register Interactive Event Listeners
   registerInteractiveListeners();
 });
 
@@ -171,7 +282,7 @@ function initThemeAndAccent() {
   const savedAccent = localStorage.getItem("portfolio-accent") || "sage";
   document.documentElement.setAttribute("data-accent", savedAccent);
   
-  // Update active class on current swatch button once rendered
+  // Highlight active swatch in picker dropdown
   setTimeout(() => {
     const swatches = document.querySelectorAll(".swatch");
     swatches.forEach(swatch => {
@@ -185,10 +296,9 @@ function initThemeAndAccent() {
 }
 
 /**
- * Renders name/initials in the Header, Footer, and updates Navigation status.
+ * Renders name/initials in the header, footer, and monogram.
  */
 function renderGlobalElements() {
-  // Fill text fields marked with data-field
   document.querySelectorAll('[data-field="name"]').forEach(el => {
     el.textContent = portfolioData.name;
   });
@@ -197,7 +307,7 @@ function renderGlobalElements() {
     el.textContent = portfolioData.initials;
   });
 
-  // Render dynamic avatar if URL is present, otherwise display monogram
+  // Render header monogram circle image or initials
   const headerMonogramWrapper = document.getElementById("header-monogram-wrapper");
   if (headerMonogramWrapper) {
     if (portfolioData.avatarUrl) {
@@ -207,115 +317,66 @@ function renderGlobalElements() {
     }
   }
 
-  // Set current year in Footer
+  // Set current copyright year
   const footerYear = document.getElementById("footer-year");
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
   }
-
-  // Set active link indicator on navigation
-  const pathname = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === pathname || (pathname === "" && href === "index.html")) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    } else {
-      link.classList.remove("active");
-      link.removeAttribute("aria-current");
-    }
-  });
 }
 
 /**
- * Binds DOM event listeners for interactivity: Theme toggle, Accent swatches, Mobile navigation
+ * Populates Hero Section
  */
-function registerInteractiveListeners() {
-  // Mobile Nav Hamburger Toggle
-  const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
-  const navLinksList = document.querySelector(".nav-links");
-
-  if (mobileMenuBtn && navLinksList) {
-    mobileMenuBtn.addEventListener("click", () => {
-      navLinksList.classList.toggle("mobile-active");
-      const isExpanded = navLinksList.classList.contains("mobile-active");
-      mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
-    });
-  }
-
-  // Theme Toggle Button
-  const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("portfolio-theme", newTheme);
-    });
-  }
-
-  // Accent Color Swatches
-  const swatches = document.querySelectorAll(".swatch");
-  swatches.forEach(swatch => {
-    swatch.addEventListener("click", () => {
-      const accent = swatch.dataset.accent;
-      if (accent) {
-        document.documentElement.setAttribute("data-accent", accent);
-        localStorage.setItem("portfolio-accent", accent);
-        
-        // Update active swatch highlight
-        swatches.forEach(s => s.classList.remove("active"));
-        swatch.classList.add("active");
-      }
-    });
-  });
-}
-
-/**
- * Population logic for Homepage (index.html)
- */
-function renderHomePage() {
-  // Monogram / Avatar Image
-  const heroAvatarContainer = document.getElementById("hero-avatar-container");
-  if (heroAvatarContainer) {
+function renderHero() {
+  const avatarContainer = document.getElementById("hero-avatar-container");
+  if (avatarContainer) {
     if (portfolioData.avatarUrl) {
-      heroAvatarContainer.innerHTML = `<img src="${portfolioData.avatarUrl}" alt="${portfolioData.name}" class="hero-avatar-image">`;
+      avatarContainer.innerHTML = `<img src="${portfolioData.avatarUrl}" alt="${portfolioData.name}" class="hero-avatar-circle-img">`;
     } else {
-      heroAvatarContainer.innerHTML = `<div class="hero-avatar-monogram" data-field="initials">${portfolioData.initials}</div>`;
+      avatarContainer.innerHTML = `<div class="hero-monogram-circle" data-field="initials">${portfolioData.initials}</div>`;
     }
   }
 
-  // Basic tags
-  setTextContentById("hero-tagline", portfolioData.tagline);
+  typeTagline(portfolioData.tagline);
   setTextContentById("hero-intro", portfolioData.about.short);
   setTextContentById("hero-location", portfolioData.location);
   setTextContentById("hero-focus", portfolioData.focus);
   setTextContentById("hero-status", portfolioData.status);
-  setTextContentById("about-preview-text", portfolioData.about.short);
-
-  // Render 2-3 Featured Projects
-  const featuredContainer = document.getElementById("featured-projects-container");
-  if (featuredContainer) {
-    const featuredProjects = portfolioData.projects.filter(p => p.featured);
-    
-    if (featuredProjects.length === 0) {
-      featuredContainer.innerHTML = "<p>No featured projects currently configured.</p>";
-      return;
-    }
-
-    featuredContainer.innerHTML = featuredProjects
-      .map(p => generateProjectHtml(p))
-      .join("");
-  }
 }
 
 /**
- * Population logic for About Page (about.html)
+ * Types the hero tagline out one character at a time for a bit of motion on page load.
+ * Respects prefers-reduced-motion by rendering the full text instantly.
  */
-function renderAboutPage() {
-  // Long Bio paragraph rendering
+function typeTagline(text) {
+  const el = document.getElementById("hero-tagline");
+  if (!el || !text) return;
+
+  const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    el.textContent = text;
+    return;
+  }
+
+  el.textContent = "";
+  el.classList.add("typing-cursor");
+  let i = 0;
+  const speed = 28;
+  (function typeNext() {
+    if (i <= text.length) {
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(typeNext, speed);
+    } else {
+      el.classList.remove("typing-cursor");
+    }
+  })();
+}
+
+/**
+ * Populates About, Education & Interests
+ */
+function renderAbout() {
   const aboutLongContainer = document.getElementById("about-long");
   if (aboutLongContainer && portfolioData.about.long) {
     const paragraphs = portfolioData.about.long.split("\n\n");
@@ -324,36 +385,40 @@ function renderAboutPage() {
       .join("");
   }
 
-  // Skills Pills
-  const skillsContainer = document.getElementById("skills-container");
-  if (skillsContainer && portfolioData.skills) {
-    skillsContainer.innerHTML = portfolioData.skills
-      .map(skill => `<span class="skill-pill">${skill}</span>`)
-      .join("");
-  }
-
-  // Education Rows
   const educationContainer = document.getElementById("education-container");
   if (educationContainer && portfolioData.education) {
     educationContainer.innerHTML = portfolioData.education
       .map(edu => `
-        <div class="education-item">
-          <h3 class="education-school">${edu.institution}</h3>
-          <div class="education-degree">${edu.degree}</div>
-          <div class="education-meta">${edu.dates} • ${edu.details}</div>
+        <div class="edu-row">
+          <h4 class="edu-school">${edu.institution}</h4>
+          <div class="edu-degree">${edu.degree}</div>
+          <div class="edu-details">${edu.dates} • ${edu.details}</div>
         </div>
       `)
       .join("");
   }
 
-  // Interests / Hobby list
   const interestsContainer = document.getElementById("interests-container");
   if (interestsContainer && portfolioData.interests) {
     interestsContainer.innerHTML = portfolioData.interests
       .map(interest => `
-        <div class="interest-item">
+        <div class="interest-row">
           <span class="interest-name">${interest.name}</span>
-          <p class="interest-desc">${interest.desc}</p>
+          <span class="interest-desc">${interest.desc}</span>
+        </div>
+      `)
+      .join("");
+  }
+
+  const awardsContainer = document.getElementById("awards-container");
+  if (awardsContainer && portfolioData.awards) {
+    awardsContainer.innerHTML = portfolioData.awards
+      .map(award => `
+        <div class="award-row">
+          <span class="award-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          </span>
+          <span class="award-text">${award}</span>
         </div>
       `)
       .join("");
@@ -361,121 +426,390 @@ function renderAboutPage() {
 }
 
 /**
- * Population logic for Projects Page (projects.html)
+ * Populates Projects list as an editorial list with accordion details expansion
  */
-function renderProjectsPage() {
-  const projectsContainer = document.getElementById("projects-container");
-  if (projectsContainer && portfolioData.projects) {
-    if (portfolioData.projects.length === 0) {
-      projectsContainer.innerHTML = "<p>No projects listed yet. Check back soon!</p>";
-      return;
-    }
-    
-    projectsContainer.innerHTML = portfolioData.projects
-      .map(p => generateProjectHtml(p))
-      .join("");
+function renderProjects() {
+  const container = document.getElementById("projects-table-container");
+  if (!container || !portfolioData.projects) return;
+
+  if (portfolioData.projects.length === 0) {
+    container.innerHTML = "<p>No projects configured.</p>";
+    return;
   }
-}
 
-/**
- * Population logic for Experience Page (experience.html)
- */
-function renderExperiencePage() {
-  const experienceContainer = document.getElementById("experience-container");
-  if (experienceContainer && portfolioData.experience) {
-    if (portfolioData.experience.length === 0) {
-      experienceContainer.innerHTML = "<p>No experiences configured yet.</p>";
-      return;
-    }
+  container.innerHTML = portfolioData.projects.map((p, idx) => {
+    const linkBtn = p.link 
+      ? `<a href="${p.link}" class="expanded-btn" target="_blank" rel="noopener noreferrer">
+           Visit Source Code
+           <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+         </a>` 
+      : `<span class="expanded-btn" style="opacity: 0.5; cursor: not-allowed; border-color: transparent;">No Link Available</span>`;
 
-    experienceContainer.innerHTML = portfolioData.experience
-      .map(exp => `
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3 class="timeline-org">${exp.organization}</h3>
-            <span class="timeline-dates">${exp.dates}</span>
-          </div>
-          <div class="timeline-role">${exp.role}</div>
-          <p class="timeline-desc">${exp.description.replace(/\n/g, "<br>")}</p>
+    const techPills = p.technologies 
+      ? p.technologies.map(t => `<span class="tag">${t}</span>`).join("") 
+      : "";
+
+    return `
+      <div class="project-row" data-index="${idx}" tabindex="0" role="button" aria-expanded="false" aria-label="Expand project ${p.title}">
+        <div class="proj-year">${p.year}</div>
+        <div class="proj-main">
+          <span class="proj-title">${p.title}</span>
+          <span class="proj-role">${p.role}</span>
         </div>
-      `)
-      .join("");
-  }
+        <div class="proj-techs">
+          ${techPills}
+        </div>
+        <div class="proj-arrow">
+          <!-- Chevron Arrow -->
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+        </div>
+      </div>
+      <div class="proj-expanded" id="proj-expanded-${idx}">
+        <div class="proj-desc-expanded">${p.description}</div>
+        ${linkBtn}
+      </div>
+    `;
+  }).join("");
+
+  // Add click listeners to handle interactive row expansion
+  const rows = container.querySelectorAll(".project-row");
+  rows.forEach(row => {
+    row.addEventListener("click", () => {
+      const idx = row.dataset.index;
+      const isExpanded = row.classList.contains("active-row");
+
+      // Reset all other rows for smooth accordion behaviour
+      rows.forEach(r => {
+        r.classList.remove("active-row");
+        r.setAttribute("aria-expanded", "false");
+        const arrow = r.querySelector(".proj-arrow svg");
+        if (arrow) arrow.style.transform = "rotate(0deg)";
+      });
+
+      if (!isExpanded) {
+        row.classList.add("active-row");
+        row.setAttribute("aria-expanded", "true");
+        const arrow = row.querySelector(".proj-arrow svg");
+        if (arrow) arrow.style.transform = "rotate(180deg)";
+      }
+    });
+
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        row.click();
+      }
+    });
+  });
 }
 
 /**
- * Population logic for Contact Page (contact.html)
+ * Populates Timeline Experience rows
  */
-function renderContactPage() {
+function renderExperience() {
+  const container = document.getElementById("experience-container");
+  if (!container || !portfolioData.experience) return;
+
+  if (portfolioData.experience.length === 0) {
+    container.innerHTML = "<p>No experiences configured.</p>";
+    return;
+  }
+
+  container.innerHTML = portfolioData.experience.map(exp => `
+    <div class="timeline-row">
+      <div class="time-dates">${exp.dates}</div>
+      <div class="time-content">
+        <h3 class="time-org">${exp.organization}</h3>
+        <div class="time-role">${exp.role}</div>
+        <p class="time-desc">${exp.description.replace(/\n/g, "<br>")}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+/**
+ * Populates Clubs & Activities as an interactive accordion — click a row to expand its description.
+ */
+function renderClubs() {
+  const container = document.getElementById("clubs-container");
+  if (!container || !portfolioData.clubs) return;
+
+  if (portfolioData.clubs.length === 0) {
+    container.innerHTML = "<p>No clubs configured.</p>";
+    return;
+  }
+
+  container.innerHTML = portfolioData.clubs.map((c, idx) => `
+    <div class="club-row" data-index="${idx}" tabindex="0" role="button" aria-expanded="false" aria-label="Expand ${c.organization}">
+      <div class="club-main">
+        <span class="club-org">${c.organization}</span>
+        <span class="club-role">${c.role}</span>
+      </div>
+      <div class="club-dates">${c.dates}</div>
+      <div class="club-arrow">
+        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+      </div>
+    </div>
+    <div class="club-expanded" id="club-expanded-${idx}">
+      <div class="proj-desc-expanded">${c.description}</div>
+    </div>
+  `).join("");
+
+  const rows = container.querySelectorAll(".club-row");
+  rows.forEach(row => {
+    row.addEventListener("click", () => {
+      const isExpanded = row.classList.contains("active-row");
+
+      rows.forEach(r => {
+        r.classList.remove("active-row");
+        r.setAttribute("aria-expanded", "false");
+        const arrow = r.querySelector(".club-arrow svg");
+        if (arrow) arrow.style.transform = "rotate(0deg)";
+      });
+
+      if (!isExpanded) {
+        row.classList.add("active-row");
+        row.setAttribute("aria-expanded", "true");
+        const arrow = row.querySelector(".club-arrow svg");
+        if (arrow) arrow.style.transform = "rotate(180deg)";
+      }
+    });
+
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        row.click();
+      }
+    });
+  });
+}
+
+/**
+ * Populates Skills Section, automatically distributing skills into 3 columns
+ */
+function renderSkills() {
+  const container = document.getElementById("skills-container");
+  if (!container || !portfolioData.skills) return;
+
+  // portfolioData.skills is an object keyed by real resume category names,
+  // e.g. { "Computer Skills": [...], "Languages": [...] }
+  const categories = Object.entries(portfolioData.skills).map(([name, items]) => ({ name, items }));
+
+  container.innerHTML = categories.map(cat => `
+    <div class="skills-col">
+      <h3>${cat.name}</h3>
+      <ul class="skills-list">
+        ${cat.items.map(item => `
+          <li class="skill-row">
+            <span>${item}</span>
+            <span class="skill-dot"></span>
+          </li>
+        `).join("")}
+      </ul>
+    </div>
+  `).join("");
+}
+
+/**
+ * Populates Contact Section
+ */
+function renderContact() {
   setTextContentById("contact-intro", portfolioData.contact.intro);
-  
-  // Update Contact Cards & Hrefs
-  const emailCard = document.getElementById("contact-email-card");
-  if (emailCard) {
-    emailCard.setAttribute("href", `mailto:${portfolioData.contact.email}`);
-    const val = emailCard.querySelector(".contact-value");
+
+  const resumeRow = document.getElementById("contact-resume-row");
+  if (resumeRow && portfolioData.contact.resumeUrl) {
+    resumeRow.setAttribute("href", portfolioData.contact.resumeUrl);
+    resumeRow.setAttribute("download", "");
+    const val = resumeRow.querySelector(".contact-value");
+    if (val) val.textContent = "Download PDF";
+  }
+
+  const emailRow = document.getElementById("contact-email-row");
+  if (emailRow) {
+    emailRow.setAttribute("href", `mailto:${portfolioData.contact.email}`);
+    const val = emailRow.querySelector(".contact-value");
     if (val) val.textContent = portfolioData.contact.email;
+
+    // Click-to-copy interaction: copies the email address and shows a brief "Copied!" confirmation
+    emailRow.addEventListener("click", (e) => {
+      if (navigator.clipboard) {
+        e.preventDefault();
+        navigator.clipboard.writeText(portfolioData.contact.email).then(() => {
+          if (val) {
+            const original = portfolioData.contact.email;
+            val.textContent = "Copied!";
+            setTimeout(() => { val.textContent = original; }, 1500);
+          }
+        }).catch(() => {
+          window.location.href = `mailto:${portfolioData.contact.email}`;
+        });
+      }
+    });
   }
 
-  const linkedinCard = document.getElementById("contact-linkedin-card");
-  if (linkedinCard) {
-    linkedinCard.setAttribute("href", portfolioData.contact.linkedin);
-    const val = linkedinCard.querySelector(".contact-value");
+  const linkedinRow = document.getElementById("contact-linkedin-row");
+  if (linkedinRow) {
+    linkedinRow.setAttribute("href", portfolioData.contact.linkedin);
+    const val = linkedinRow.querySelector(".contact-value");
     if (val) {
-      // Show username snippet
-      const parts = portfolioData.contact.linkedin.split("/").filter(Boolean);
-      val.textContent = parts[parts.length - 1] || "LinkedIn Profile";
+      if (portfolioData.contact.linkedinName) {
+        val.textContent = portfolioData.contact.linkedinName;
+      } else {
+        const parts = portfolioData.contact.linkedin.split("/").filter(Boolean);
+        val.textContent = parts[parts.length - 1] || "LinkedIn";
+      }
     }
   }
 
-  const githubCard = document.getElementById("contact-github-card");
-  if (githubCard) {
-    githubCard.setAttribute("href", portfolioData.contact.github);
-    const val = githubCard.querySelector(".contact-value");
+  const githubRow = document.getElementById("contact-github-row");
+  if (githubRow) {
+    githubRow.setAttribute("href", portfolioData.contact.github);
+    const val = githubRow.querySelector(".contact-value");
     if (val) {
-      const parts = portfolioData.contact.github.split("/").filter(Boolean);
-      val.textContent = parts[parts.length - 1] || "GitHub Profile";
+      if (portfolioData.contact.githubName) {
+        val.textContent = portfolioData.contact.githubName;
+      } else {
+        const parts = portfolioData.contact.github.split("/").filter(Boolean);
+        val.textContent = parts[parts.length - 1] || "GitHub";
+      }
     }
+  }
+}
+
+/**
+ * Registers interactive features:
+ * - Scroll Indicator
+ * - Scroll Spy Active Highlighting
+ * - Color Swatches Toggle Dropdown
+ * - Mobile navigation burger trigger
+ * - Smooth scrolling menu triggers
+ */
+function registerInteractiveListeners() {
+  const scrollProgress = document.getElementById("scroll-progress");
+  const sections = document.querySelectorAll("section.scroll-section, section#home");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Scroll Indicators & Scroll Spy
+  window.addEventListener("scroll", () => {
+    // 1. Progress indicator width
+    const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollMax > 0 && scrollProgress) {
+      const pct = (window.scrollY / scrollMax) * 100;
+      scrollProgress.style.width = `${pct}%`;
+    }
+
+    // 2. Active section highlights
+    let currentId = "home";
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 150; // offset slightly before element reaches view
+      const height = sec.offsetHeight;
+      if (window.scrollY >= top && window.scrollY < top + height) {
+        currentId = sec.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === `#${currentId}`) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+      }
+    });
+  });
+
+  // Mobile navigation trigger
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const navLinksList = document.querySelector(".nav-links");
+
+  if (mobileMenuToggle && navLinksList) {
+    mobileMenuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navLinksList.classList.toggle("mobile-active");
+      const isExpanded = navLinksList.classList.contains("mobile-active");
+      mobileMenuToggle.setAttribute("aria-expanded", isExpanded);
+    });
+
+    // Close mobile menu if user clicks an anchor link
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinksList.classList.remove("mobile-active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Close menu on clicks outside
+    document.addEventListener("click", (e) => {
+      if (!navLinksList.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        navLinksList.classList.remove("mobile-active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Accent Color Palette Dropdown Toggle
+  const paletteBtn = document.getElementById("palette-dropdown-btn");
+  const swatchesMenu = document.getElementById("accent-swatches-menu");
+  
+  if (paletteBtn && swatchesMenu) {
+    paletteBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      swatchesMenu.classList.toggle("show");
+      const isShow = swatchesMenu.classList.contains("show");
+      paletteBtn.setAttribute("aria-expanded", isShow);
+    });
+
+    // Close dropdown on clicks outside
+    document.addEventListener("click", (e) => {
+      if (!swatchesMenu.contains(e.target) && !paletteBtn.contains(e.target)) {
+        swatchesMenu.classList.remove("show");
+        paletteBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Accent Switch Click Listeners
+  const swatches = document.querySelectorAll(".swatch");
+  swatches.forEach(swatch => {
+    swatch.addEventListener("click", () => {
+      const accent = swatch.dataset.accent;
+      if (accent) {
+        document.documentElement.setAttribute("data-accent", accent);
+        localStorage.setItem("portfolio-accent", accent);
+
+        swatches.forEach(s => s.classList.remove("active"));
+        swatch.classList.add("active");
+        
+        // Hide dropdown menu upon selection
+        if (swatchesMenu) {
+          swatchesMenu.classList.remove("show");
+          if (paletteBtn) paletteBtn.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+  });
+
+  // Dark/Light Theme Button Click Listener
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("portfolio-theme", newTheme);
+    });
   }
 }
 
 // --- HELPER UTILITY FUNCTIONS ---
 
 /**
- * Helper to set text content of element safely if it exists
+ * Safely sets the text content of an element by ID
  */
 function setTextContentById(id, text) {
   const el = document.getElementById(id);
   if (el) el.textContent = text;
-}
-
-/**
- * Helper to convert a single project data object into clean HTML markup
- */
-function generateProjectHtml(p) {
-  // Title markup: click to visit link if configured, else plain text with no link wrapper
-  const titleContent = p.link 
-    ? `<a href="${p.link}" class="project-title-link" target="_blank" rel="noopener noreferrer">
-         ${p.title}
-         <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-       </a>`
-    : `<span class="project-title-link" style="cursor: default;">${p.title}</span>`;
-
-  const techTags = p.technologies
-    ? p.technologies.map(t => `<span class="tag">${t}</span>`).join("")
-    : "";
-
-  return `
-    <div class="project-item">
-      <div class="project-header">
-        ${titleContent}
-        <span class="project-year">${p.year}</span>
-      </div>
-      <div class="project-role">${p.role}</div>
-      <p class="project-desc">${p.description}</p>
-      <div class="project-tags">
-        ${techTags}
-      </div>
-    </div>
-  `;
 }
